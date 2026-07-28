@@ -15,3 +15,10 @@ app.include_router(user.router)
 app.include_router(product.router)
 app.include_router(inventory.router)
 app.include_router(order.router)
+
+
+@app.get("/")
+def root():
+  return {
+    "Message":"E-Commerce Backend API is Running","docs":"/docs"
+  }
